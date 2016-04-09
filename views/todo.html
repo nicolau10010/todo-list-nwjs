@@ -1,0 +1,7 @@
+<li>
+	<input class="todo-check" type="checkbox" {% if checked %}checked {% endif %}>
+	<textarea class="todo-content" {% if checked %} disabled {% endif %}>{{content}}</textarea>
+	<div class="delete-button-container">
+		<a href="#" class="button delete-button">-</a>
+	</div>
+</li>

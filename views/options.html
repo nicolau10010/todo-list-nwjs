@@ -1,0 +1,22 @@
+<form>
+	<label>
+		Notes Background color
+		<input type="color" id="notesColor" value="{{notesColor}}"
+		list="color"/>
+		<datalist id="color">
+			<option value="#F8F8FF"></option>
+			<option value="#d7e5c5"></option>
+			<option value="#c8c3e0"></option>
+			<option value="#cbdde1"></option>
+		</datalist>
+	</label>
+	<label>
+		Remote CouchDB Url
+		<input type="text" id="couchDbUrl" value="{{couchDbUrl}}"
+		placeholder="https://xxx.iriscouch.com/todo"/>
+	</label>
+	<div class="buttons">
+		<button id="dismiss">Dismiss</button>
+		<button id="save">Save</button>
+	</div>
+</form>

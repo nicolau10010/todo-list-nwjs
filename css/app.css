@@ -1,0 +1,106 @@
+/* Reset */
+html, body, #mainView {
+	width: 100%; height: 100%; margin: 0; padding: 0;
+}
+/* Custom behaviors */
+html * {
+	-webkit-user-select: none; box-sizing: border-box;
+}
+/* mainView container */
+#mainView {
+display: flex; 
+border-top: 1px solid #c7c7c7;
+}
+/* Right sidebar */
+#sidebar {
+flex: 0 0 100px;
+padding: 15px 0; text-align: center;
+background: #414A4C; color: #f8f8f8;
+}
+/* Todo container */
+#todoListContainer {
+	flex: 1;
+	background: #F8F8FF; overflow: auto;
+}
+/* Button styling */
+.button {
+	font-family: sans-serif; font-weight: 800;
+	display: inline-block; border-radius: 100%;
+	color: #F8F8FF; text-align: center; text-decoration: none;
+	transition: background-color 0.2s linear;
+}
+/* Add button */
+.add-button {
+	background: #28a93f;
+	height: 60px; width: 60px;
+	line-height: 60px; font-size: 26px;
+}
+.add-button:hover {
+	background-color: #46BA5A;
+}
+/* Delete button */
+.delete-button-container {
+	flex: 0 0 30px; 
+	text-align: right;
+}
+.delete-button {
+	background: rgba(0,0,0,0.0);
+	height: 20px; width: 20px;
+	line-height: 18px; font-size: 18px;
+}
+/* ToDo List */
+#todoList {
+	list-style: none;
+	padding: 0;margin: 0;
+}
+#todoList li {
+	display: flex;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	padding: 15px 10px; background: #F8F8FF;
+}
+#todoList li:hover .delete-button {
+	background: rgba(0,0,0,0.1);
+}
+#todoList li:hover .delete-button:hover {
+	background: #d62700;
+}
+#todoList input {
+	flex: 0 0 30px;
+}
+/* ToDO Content */
+.todo-content {
+	flex: 1;
+	line-height: 20px; height: 20px;
+	padding: 0; font-size: 16px; color: #333;
+	font-family: Consolas, monospace;
+	overflow: hidden; resize: none;
+	border: none; background: transparent;
+}
+.todo-content[disabled] {
+	text-decoration: line-through; 
+	color: rgba(0,0,50,0.3);
+}
+.todo-content:focus {
+	color: #000; 
+	outline: 0px solid transparent;
+}
+/* Sync overlay */
+#syncing {
+	font-family: Consolas, monospace;
+	display: block; position: fixed;
+	top: 0;right: 0;bottom: 0;left: 0;
+	background: rgba(0,0,0,0.8);
+	text-align: center; color: #18E713;
+}
+#syncing > span {
+	margin-top: 60px; 
+	display: block; 
+	font-size: 15px;
+}
+#syncing > span > span {
+	-webkit-animation: blink 1s linear infinite;
+}
+/* Animation */
+@-webkit-keyframes blink {
+	from { opacity: 1.0; } to { opacity: 0.0; }
+}

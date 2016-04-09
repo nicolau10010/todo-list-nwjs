@@ -1,0 +1,33 @@
+/* Reset */
+html, body {
+	width: 100%; height: 100%;
+	margin: 0; padding: 0;
+}
+/* Custom behaviors */
+html * {
+	box-sizing: border-box;-webkit-user-select: none;
+}
+/* Body */
+body {
+	background: #f4f4f4; font-family: sans-serif;
+	padding: 20px; border-top: 1px solid #ccc;
+}
+/* Labels */
+label {
+	display: block;border-bottom: 1px solid #eee;
+	margin-bottom: 15px;color: #151515;
+}
+/* Inputs */
+input {
+	margin: 5px 0 15px 0;
+}
+input[type=text] {
+	padding: 5px; width:100%;
+}
+input[type=color] {
+	display: inline-block;margin-left: 20px
+}
+/* Buttons */
+.buttons {
+	position: absolute;bottom: 20px;right: 20px;
+}
